@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white_solid">#FFFFFF</color>
+    <color name="controllerTextColor">#FFFFFF</color>
+    <color name="colorAccent">#39ff14</color>
+
+</resources>

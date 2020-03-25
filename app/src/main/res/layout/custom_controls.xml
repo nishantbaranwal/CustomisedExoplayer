@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center|bottom"
+            android:layout_weight=".5">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageButton
+                    android:id="@id/exo_play"
+                    style="@style/ExoMediaButton.Play"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:background="#CC000000" />
+
+                <ImageButton
+                    android:id="@id/exo_pause"
+                    style="@style/ExoMediaButton.Pause"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:background="#CC000000" />
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".4"
+            android:weightSum="1"
+            android:gravity="center|bottom"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="30dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/exo_position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="00:00" />
+
+                <com.google.android.exoplayer2.ui.DefaultTimeBar
+                    android:id="@id/exo_progress"
+                    android:layout_width="0dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp"
+                    app:scrubber_color="@color/lb_grey"
+                    android:nextFocusDown="@+id/iBInfo"
+                    android:layout_weight="1"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/exo_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="50dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="00:00" />
+            </LinearLayout>
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="50dp"
+                    >
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/information"
+                        android:focusableInTouchMode="true"
+                        android:focusable="true"
+                        android:id="@+id/iBInfo"
+                        />
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/home_circle"
+                        android:focusableInTouchMode="true"
+                        android:focusable="true"
+                        android:id="@+id/iBHome"
+                        />
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="10dp"
+                        android:focusableInTouchMode="true"
+                        android:focusable="true"
+                        android:src="@drawable/closed_caption_outline"
+                        android:id="@+id/iBCaption"
+                        />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
